@@ -8,7 +8,7 @@ export default function Chamada() {
         <div className="chamada">
           <div>
             <h2 id="titulo-chamada">Bateu a vontade? <em>Peça agora.</em></h2>
-            <p>Escolha as pizzas, confira o total na sacola e envie o pedido pronto pelo Telegram. É só confirmar o endereço.</p>
+            <p>Escolha os sabores no cardápio e faça seu pedido pelo nosso atendimento no Telegram.</p>
           </div>
           <a className="btn btn-tele" href={LINK_TELEGRAM} target="_blank" rel="noopener noreferrer">
             <IconeTelegram /> Chamar no Telegram

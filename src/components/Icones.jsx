@@ -4,13 +4,6 @@ export const IconeTelegram = () => (
   </svg>
 )
 
-export const IconeSacola = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-    <path d="M6 7h12l-1 13H7L6 7z" />
-    <path d="M9 7a3 3 0 0 1 6 0" />
-  </svg>
-)
-
 export const Logo = () => (
   <svg viewBox="0 0 40 40" aria-hidden="true">
     <circle cx="20" cy="20" r="18" fill="#C98B3A" />

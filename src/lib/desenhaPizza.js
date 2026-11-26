@@ -1,6 +1,6 @@
 import { rng, hash } from './util'
 
-// Desenha a pizza vista de cima num <canvas> (usada nos cards e na sacola).
+// Desenha a pizza vista de cima num <canvas> (usada nos cards do cardápio).
 // Não carrega imagens: tudo é gerado aqui, então é leve e cada sabor tem sua cara.
 
 const BASES = { molho: '#B23620', choc: '#4A2618', leite: '#F3E6C8', queijo: '#F2D79A', doceleite: '#C4864A' }

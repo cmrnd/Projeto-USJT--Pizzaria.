@@ -67,7 +67,6 @@ export const BEBIDAS = [
   b('Suco', 'Goiaba natural', 20, '#E9727A', '#F5EBDD', '#C98B3A'),
 ]
 
-// Tudo o que pode ir para a sacola
+// Tudo o que aparece no cardápio
 export const ITENS = [...PIZZAS, ...BEBIDAS]
-export const ITEM_POR_NOME = Object.fromEntries(ITENS.map((it) => [it.nome, it]))
 export const MENOR_PRECO = Math.min(...PIZZAS.map((pz) => pz.precos.Broto))

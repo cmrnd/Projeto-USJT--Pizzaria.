@@ -1,18 +1,7 @@
-import { useEffect } from 'react'
-import { motion, useAnimationControls } from 'motion/react'
-import { useCart } from '../../context/CartContext'
-import { qtdItens, brl } from '../../lib/util'
-import { IconeSacola, Logo } from '../Icones'
+import { LINK_TELEGRAM } from '../../config'
+import { IconeTelegram, Logo } from '../Icones'
 
 export default function Header() {
-  const { n, total, abrir } = useCart()
-  const pulo = useAnimationControls()
-
-  // O botão da sacola "pula" quando um item entra
-  useEffect(() => {
-    if (n > 0) pulo.start({ scale: [1, 1.14, 1], transition: { duration: 0.45, ease: 'easeOut' } })
-  }, [n, pulo])
-
   return (
     <header>
       <div className="wrap nav">
@@ -27,17 +16,10 @@ export default function Header() {
             <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
-        <motion.button
-          animate={pulo}
-          className="btn btn-sacola"
-          aria-haspopup="dialog"
-          aria-label={`Abrir sacola, ${qtdItens(n)}, total ${brl(total)}`}
-          onClick={abrir}
-        >
-          <IconeSacola />
-          <span className="rot">Sacola</span>
-          <span className="qt">{n}</span>
-        </motion.button>
+        <a className="btn btn-pedir" href={LINK_TELEGRAM} target="_blank" rel="noopener noreferrer" aria-label="Pedir no Telegram">
+          <IconeTelegram />
+          <span className="rot">Pedir no Telegram</span>
+        </a>
       </div>
     </header>
   )

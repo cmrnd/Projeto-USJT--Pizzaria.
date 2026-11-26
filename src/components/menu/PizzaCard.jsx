@@ -1,38 +1,6 @@
-import { useState } from 'react'
 import { motion } from 'motion/react'
-import { useCart } from '../../context/CartContext'
 import { brl } from '../../lib/util'
 import ItemThumb from './ItemThumb'
-
-// Como cada tamanho é lido pelo leitor de tela
-const NOME_TAM = { Broto: 'pizza broto', Grande: 'pizza grande', '2 litros': 'garrafa de 2 litros' }
-
-function BotaoTamanho({ item, tam }) {
-  const { adicionar } = useCart()
-  const [ok, setOk] = useState(false)
-  const preco = item.precos[tam]
-  return (
-    <motion.button
-      type="button"
-      className={`tam${ok ? ' ok' : ''}`}
-      whileTap={{ scale: 0.95 }}
-      aria-label={`Adicionar ${item.nome}, ${NOME_TAM[tam]}, ${brl(preco)}`}
-      onClick={() => {
-        adicionar(item.nome, tam)
-        setOk(true)
-        setTimeout(() => setOk(false), 1000)
-      }}
-    >
-      <small>{tam}</small>
-      <b>
-        {brl(preco)}
-        <motion.span className="mais" aria-hidden="true" animate={{ rotate: ok ? 360 : 0 }} transition={{ duration: 0.4 }}>
-          {ok ? '✓' : '+'}
-        </motion.span>
-      </b>
-    </motion.button>
-  )
-}
 
 // Card do cardápio: serve para pizzas (Broto e Grande) e bebidas (2 litros)
 export default function PizzaCard({ item, rotulo, indice }) {
@@ -54,9 +22,15 @@ export default function PizzaCard({ item, rotulo, indice }) {
       <div className="corpo">
         <h3>{item.nome}</h3>
         <p>{desc.charAt(0).toUpperCase() + desc.slice(1)}.</p>
-        <div className={`tams${tams.length === 1 ? ' um' : ''}`}>
-          {tams.map((t) => <BotaoTamanho key={t} item={item} tam={t} />)}
-        </div>
+        {/* Só mostra os preços: o pedido é feito no chatbot do Telegram */}
+        <dl className={`tams${tams.length === 1 ? ' um' : ''}`}>
+          {tams.map((t) => (
+            <div className="tam" key={t}>
+              <dt>{t}</dt>
+              <dd>{brl(item.precos[t])}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </motion.article>
   )

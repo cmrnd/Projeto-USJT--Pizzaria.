@@ -1,9 +1,7 @@
 import { lazy, Suspense, useRef, useState } from 'react'
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
-import { LINK_TELEGRAM } from '../../config'
 import { MENOR_PRECO, PIZZAS } from '../../data/cardapio'
 import { brl } from '../../lib/util'
-import { IconeTelegram } from '../Icones'
 
 // O 3D (three.js) é carregado à parte: o texto aparece na hora e a cena chega em seguida
 const PizzaScene = lazy(() => import('./PizzaScene'))
@@ -43,13 +41,10 @@ export default function Hero() {
             <motion.p variants={item} className="eyebrow">Pizzaria · Impasto di lunga lievitazione</motion.p>
             <motion.h1 variants={item} id="titulo-hero">Pizza <em>di casa,</em> direto do forno.</motion.h1>
             <motion.p variants={item} className="hero-lede">
-              Massa de longa fermentação, molho de tomate artesanal e muito queijo. Monte seu pedido no cardápio e envie pelo Telegram em um toque.
+              Massa de longa fermentação, molho de tomate artesanal e muito queijo. Veja o cardápio e faça seu pedido pelo Telegram.
             </motion.p>
             <motion.div variants={item} className="hero-ctas">
               <a className="btn btn-tomate" href="#cardapio">Ver cardápio</a>
-              <a className="btn btn-linha" href={LINK_TELEGRAM} target="_blank" rel="noopener noreferrer">
-                <IconeTelegram /> Pedir no Telegram
-              </a>
             </motion.div>
             <motion.div variants={item} className="hero-dados">
               <div><strong>{PIZZAS.length}</strong><span>sabores</span></div>
