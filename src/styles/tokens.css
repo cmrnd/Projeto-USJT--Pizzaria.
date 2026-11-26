@@ -1,0 +1,26 @@
+/* Identidade visual: italiana contemporânea.
+   Vermelho tomate, creme, preto e tons terrosos. Bodoni Moda (display, de origem italiana) + Archivo (texto). */
+:root {
+  --tomate: #C8321E;
+  --tomate-esc: #9C2416;
+  --creme: #F5EBDD;
+  --creme-claro: #FBF5EC;
+  --creme-2: #EADBC5;
+  --nero: #15110F;
+  --nero-2: #221A16;
+  --terra: #8A5A3B;
+  --ocra: #C98B3A;
+  --oliva: #4E6B2E;
+  --tinta: #2A201B;
+  --tinta-suave: #6A5547;
+  --tele: #1C75AD;
+  --tele-esc: #155B87;
+
+  --f-display: 'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
+  --f-texto: 'Archivo', 'Segoe UI', system-ui, sans-serif;
+
+  --raio: 20px;
+  --ease-saida: cubic-bezier(.2, .8, .2, 1);
+  --ease-mola: cubic-bezier(.3, 1.6, .5, 1);
+  color-scheme: light;
+}
