@@ -19,7 +19,7 @@ Se o `npm install` travar nesta rede, use o espelho do Yarn:
 | O quê | Arquivo |
 |---|---|
 | Sabores, descrições e preços | `src/data/cardapio.js` |
-| Número do Telegram, endereço, horário | `src/config.js` |
+| Chatbot do Telegram, endereço, horário | `src/config.js` |
 | Cores e fontes | `src/styles/tokens.css` |
 | Pizza 3D (formato, coberturas, animação da fatia) | `src/components/hero/construirPizza.js` |
 | Fotos reais das pizzas | coloque em `public/fotos/` e adicione `foto: '/fotos/nome.jpg'` ao sabor em `cardapio.js` |
