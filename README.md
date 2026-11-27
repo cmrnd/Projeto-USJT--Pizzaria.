@@ -23,5 +23,3 @@ Se o `npm install` travar nesta rede, use o espelho do Yarn:
 | Cores e fontes | `src/styles/tokens.css` |
 | Pizza 3D (formato, coberturas, animação da fatia) | `src/components/hero/construirPizza.js` |
 | Fotos reais das pizzas | coloque em `public/fotos/` e adicione `foto: '/fotos/nome.jpg'` ao sabor em `cardapio.js` |
-
-O site antigo (HTML único) está guardado em `versao-antiga/index.html`.
